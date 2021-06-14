@@ -1847,3 +1847,43 @@ INFO 2021-06-14 07:51:14,195 autoreload 636 Watching for file changes with StatR
 INFO 2021-06-14 07:54:49,713 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-06-14 07:54:52,375 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
 INFO 2021-06-14 07:55:20,699 autoreload 250 F:\Python\Python_Project\python_test_developer\users\serializers.py changed, reloading.
+INFO 2021-06-14 21:45:28,911 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 21:48:33,445 basehttp 161 "OPTIONS /user/login/ HTTP/1.1" 200 504
+INFO 2021-06-14 21:48:33,448 basehttp 75 - Broken pipe from ('127.0.0.1', 6218)
+
+INFO 2021-06-14 22:13:55,126 autoreload 250 F:\Python\PythonNetWork\BaiduNetdiskWorkspace\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-14 22:13:57,537 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:26:38,904 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:27:38,061 autoreload 250 F:\Python\PythonNetWork\BaiduNetdiskWorkspace\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-14 22:27:40,458 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:27:54,023 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:30:52,506 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:31:33,625 autoreload 250 F:\Python\PythonNetWork\BaiduNetdiskWorkspace\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-14 22:31:35,950 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-14 22:32:58,474 basehttp 161 "OPTIONS /user/login/ HTTP/1.1" 200 0
+INFO 2021-06-14 22:32:58,725 basehttp 161 "POST /user/login/ HTTP/1.1" 200 218
+INFO 2021-06-14 22:32:58,850 basehttp 161 "OPTIONS /summary/ HTTP/1.1" 200 0
+INFO 2021-06-14 22:32:58,858 basehttp 161 "OPTIONS /summary/ HTTP/1.1" 200 0
+WARNING 2021-06-14 22:32:58,925 log 224 Not Found: /summary/
+WARNING 2021-06-14 22:32:58,926 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-14 22:32:58,942 log 224 Not Found: /summary/
+WARNING 2021-06-14 22:32:58,943 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+INFO 2021-06-14 22:33:19,102 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-14 22:33:25,679 basehttp 161 "GET /user/sunwang999/count/ HTTP/1.1" 200 35
+INFO 2021-06-14 22:33:27,015 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:33:33,763 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:33:39,599 basehttp 161 "GET /user/641210595@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:33:56,276 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:34:00,481 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-14 22:37:01,198 basehttp 161 "GET /user/sunwang9/count/ HTTP/1.1" 200 33
+INFO 2021-06-14 22:37:03,662 basehttp 161 "GET /user/641210599@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:37:10,872 basehttp 161 "GET /user/sunwang9/count/ HTTP/1.1" 200 33
+INFO 2021-06-14 22:37:10,883 basehttp 161 "GET /user/641210599@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-14 22:37:10,895 basehttp 161 "OPTIONS /user/register/ HTTP/1.1" 200 0
+INFO 2021-06-14 22:37:11,126 basehttp 161 "POST /user/register/ HTTP/1.1" 200 221
+WARNING 2021-06-14 22:37:11,249 log 224 Not Found: /summary/
+WARNING 2021-06-14 22:37:11,250 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-14 22:37:11,265 log 224 Not Found: /summary/
+WARNING 2021-06-14 22:37:11,266 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+INFO 2021-06-15 00:07:41,250 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-15 00:11:25,797 basehttp 161 "POST /user/login/ HTTP/1.1" 200 218

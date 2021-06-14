@@ -1,0 +1,21 @@
+# 关键字不可自定义
+# 接口名称
+name: "用户登陆接口"
+# variables:
+#     key: val
+# 请求参数
+request:
+    # 路径
+    url: "http://127.0.0.1:8000/user/login/"
+    # 方法
+    method: POST
+    # 请求头
+    headers:
+        Content-Type: "application/json"
+    # 请求参数
+    json:
+        username: "sunwang"
+        password: "334498sun"
+# 结果校验
+validate:
+    - eq: ["status_code", 200]
