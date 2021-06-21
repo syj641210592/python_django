@@ -9,13 +9,22 @@ request:
     url: "http://127.0.0.1:8000/user/login/"
     # 方法
     method: POST
-    # 请求头
+    # 请求头Json数据
     headers:
         Content-Type: "application/json"
     # 请求参数
     json:
         username: "sunwang"
         password: "334498sun"
+    # # 请求头表单手机格式
+    # headers:
+    #     Content-Type: "application/x-www-form-urlencoded"
+    # # 请求参数
+    # data:
+    #     username: "sunwang"
+    #     password: "334498sun"
 # 结果校验
 validate:
     - eq: ["status_code", 200]
+
+verify: false

@@ -1,0 +1,23 @@
+# 接口名称
+name: "注册接口"
+# 变量定义
+# variables:
+#     var1: value1
+#     var2: value2
+# 请求参数
+request:
+    # 路径
+    url: "/user/register/"
+    # 方法
+    method: POST
+    # 请求头
+    headers:
+        Content-Type: "application/json"
+    # 请求参数
+    json:
+        username: "$username"
+        password: "$password"
+        password_confirm: "$password_confirm"
+        email: "$email"
+# 忽略对SSL证书的请求
+verify: false

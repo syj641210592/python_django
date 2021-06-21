@@ -1,0 +1,30 @@
+# 测试用例配置文件
+config:
+    name: "注册用例配置文件"
+    # 变量定义
+    # variables:
+    #     device_sn: "ABC"
+    #     username: ${ENV(USERNAME)}
+    #     password: ${ENV(PASSWORD)}
+    # 基础url定义, 已在suite内定义
+    # base_url: "http://127.0.0.1:5000"
+
+# 注册测试用例
+teststeps:
+-
+    # 步骤一
+    name: "$title"
+    # 对应的api目录下的测试用例文件, 填写相对于httprunner工程文件目录的相对地址
+    api: "api/register_api.yml"
+    # 相关参数的赋值使用
+    # variables:
+    #     user_agent: 'iOS/10.3'
+    #     device_sn: $device_sn
+    # 提取当前步骤返回结果内的变量
+    # extract:
+    #     - token: json.token
+    # 结果校验规则
+    validate:
+        - eq: ["status_code", "$status_code"]
+        - contains: ["json", "$msg"]
+

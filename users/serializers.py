@@ -30,12 +30,14 @@ class UserRegisterModelSeralizer(serializers.ModelSerializer):
         # 对现有的字段加入额外的校验项
         extra_kwargs = {
             "email": {
+                'write_only':
+                True,
+                'required':
+                True,
                 "validators": [
                     UniqueValidator(queryset=User.objects.all(),
                                     message="邮箱名称已存在")
-                ],
-                "required":
-                True
+                ]
             },
             "password": {
                 "min_length": 5,

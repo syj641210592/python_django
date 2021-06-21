@@ -1,0 +1,22 @@
+# 配置信息
+config:
+    name: "测试用例集配置信息"
+    # 相关参数定义
+    # variables:
+    #     device_sn: "XYZ"
+    # 基础的网址
+    base_url: "${ENV(base_url)}"
+
+# 测试用例集
+testcases:
+-
+    # 填写测试用例集名称
+    name: "注册测试用例集"
+    # 对应的testcases目录下的测试用例文件, 填写相对于httprunner工程文件目录的相对地址
+    testcase: "testcases/register_testcase.yml"
+    # 相关参数的赋值使用
+    # variables:
+    #     device_sn: $device_sn
+    # 参数化测试用例数据
+    parameters:
+        title-username-password-password_confirm-email-status_code-msg: ${register_data()}
