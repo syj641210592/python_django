@@ -19,4 +19,4 @@ testcases:
     #     device_sn: $device_sn
     # 参数化测试用例数据
     parameters:
-        title-username-password-password_confirm-email-status_code-msg: ${register_data()}
+        - title-username-password-password_confirm-email-status_code-msg: ${register_data()}

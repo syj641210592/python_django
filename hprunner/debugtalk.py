@@ -43,7 +43,7 @@ def register_data():
             "password_confirm": "334498xsunx",
             "email": "641210592x@qq.com",
             "status_code": 400,
-            "msg": "password_confirm"  # 只能填写返回字段数据的key值
+            "msg": "non_field_errors"  # 只能填写返回字段数据的key值
         },
         {
             "title": "注册失败_确认密码为空",

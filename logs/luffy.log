@@ -2133,3 +2133,58 @@ WARNING 2021-06-20 06:50:50,707 log 224 Bad Request: /user/register/
 WARNING 2021-06-20 06:50:50,709 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
 WARNING 2021-06-20 06:51:48,468 log 224 Bad Request: /user/register/
 WARNING 2021-06-20 06:51:48,470 basehttp 161 "POST /user/register/ HTTP/1.1" 400 108
+INFO 2021-06-21 22:13:00,309 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:14:22,013 basehttp 161 "POST /user/register/ HTTP/1.1" 200 223
+WARNING 2021-06-21 22:14:22,082 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,083 basehttp 161 "POST /user/register/ HTTP/1.1" 400 41
+WARNING 2021-06-21 22:14:22,162 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,164 basehttp 161 "POST /user/register/ HTTP/1.1" 400 59
+WARNING 2021-06-21 22:14:22,236 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,238 basehttp 161 "POST /user/register/ HTTP/1.1" 400 41
+WARNING 2021-06-21 22:14:22,315 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,316 basehttp 161 "POST /user/register/ HTTP/1.1" 400 46
+WARNING 2021-06-21 22:14:22,393 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,395 basehttp 161 "POST /user/register/ HTTP/1.1" 400 49
+INFO 2021-06-21 22:14:22,610 basehttp 161 "POST /user/register/ HTTP/1.1" 200 201
+WARNING 2021-06-21 22:14:22,693 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:14:22,694 basehttp 161 "POST /user/register/ HTTP/1.1" 400 93
+INFO 2021-06-21 22:16:38,263 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\users\serializers.py changed, reloading.
+INFO 2021-06-21 22:16:40,685 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:18:14,734 basehttp 161 "POST /user/register/ HTTP/1.1" 200 201
+INFO 2021-06-21 22:18:44,540 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:18:50,027 basehttp 161 "POST /user/register/ HTTP/1.1" 200 201
+WARNING 2021-06-21 22:19:25,940 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:19:25,941 basehttp 161 "POST /user/register/ HTTP/1.1" 400 108
+INFO 2021-06-21 22:20:25,264 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\users\serializers.py changed, reloading.
+INFO 2021-06-21 22:20:27,654 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:22:28,131 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:24:00,896 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-21 22:24:05,193 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:24:05,195 basehttp 161 "POST /user/register/ HTTP/1.1" 400 108
+WARNING 2021-06-21 22:24:30,979 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:24:30,981 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-06-21 22:24:47,657 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:24:47,659 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
+INFO 2021-06-21 22:25:00,047 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\users\serializers.py changed, reloading.
+INFO 2021-06-21 22:25:42,626 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-21 22:25:46,007 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:25:46,009 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-06-21 22:25:54,683 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:25:54,684 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
+INFO 2021-06-21 22:26:00,385 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\users\serializers.py changed, reloading.
+INFO 2021-06-21 22:26:02,939 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-21 22:29:11,330 basehttp 161 "POST /user/register/ HTTP/1.1" 200 223
+WARNING 2021-06-21 22:29:11,398 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,399 basehttp 161 "POST /user/register/ HTTP/1.1" 400 41
+WARNING 2021-06-21 22:29:11,513 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,522 basehttp 161 "POST /user/register/ HTTP/1.1" 400 59
+WARNING 2021-06-21 22:29:11,614 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,616 basehttp 161 "POST /user/register/ HTTP/1.1" 400 41
+WARNING 2021-06-21 22:29:11,695 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,697 basehttp 161 "POST /user/register/ HTTP/1.1" 400 46
+WARNING 2021-06-21 22:29:11,770 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,772 basehttp 161 "POST /user/register/ HTTP/1.1" 400 49
+WARNING 2021-06-21 22:29:11,837 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,838 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-06-21 22:29:11,913 log 224 Bad Request: /user/register/
+WARNING 2021-06-21 22:29:11,914 basehttp 161 "POST /user/register/ HTTP/1.1" 400 35
