@@ -23,7 +23,7 @@ class BaseModel(models.Model):
     name = models.CharField(verbose_name="名称",
                             help_text="名称",
                             unique=True,
-                            max_length=20)
+                            max_length=50)
 
     # 内部类
     class Meta:

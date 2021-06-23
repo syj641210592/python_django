@@ -19,5 +19,11 @@ class InterfacesModel(BaseModel):
     class Meta:
         # 数据表命
         db_table = "tb_interfaces"
+        # 数据表描述信息
+        verbose_name = '接口信息'
+        verbose_name_plural = verbose_name
         # 数据排序主键
         ordering = ["id"]
+
+    def __str__(self):
+        return self.name

@@ -2188,3 +2188,4 @@ WARNING 2021-06-21 22:29:11,837 log 224 Bad Request: /user/register/
 WARNING 2021-06-21 22:29:11,838 basehttp 161 "POST /user/register/ HTTP/1.1" 400 38
 WARNING 2021-06-21 22:29:11,913 log 224 Bad Request: /user/register/
 WARNING 2021-06-21 22:29:11,914 basehttp 161 "POST /user/register/ HTTP/1.1" 400 35
+INFO 2021-06-23 22:26:58,391 autoreload 636 Watching for file changes with StatReloader
