@@ -3,12 +3,12 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class Testcases(BaseModel):
+class TestcasesModel(BaseModel):
     name = models.CharField('用例名称',
                             max_length=50,
                             unique=True,
                             help_text='用例名称')
-    interface = models.ForeignKey('interfaces.Interfaces',
+    interface = models.ForeignKey('interfaces.InterfacesModel',
                                   on_delete=models.CASCADE,
                                   help_text='所属接口')
     include = models.TextField('前置', null=True, help_text='用例执行前置顺序')

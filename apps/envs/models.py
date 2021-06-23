@@ -3,7 +3,7 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class Envs(BaseModel):
+class EnvsModel(BaseModel):
     name = models.CharField(verbose_name='环境名称',
                             max_length=200,
                             unique=True,

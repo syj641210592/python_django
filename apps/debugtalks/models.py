@@ -3,7 +3,7 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class DebugTalks(BaseModel):
+class DebugTalksModel(BaseModel):
     name = models.CharField('debugtalk文件名称',
                             max_length=200,
                             default='debugtalk.py',
@@ -11,7 +11,7 @@ class DebugTalks(BaseModel):
     debugtalk = models.TextField(null=True,
                                  default='#debugtalk.py',
                                  help_text='debugtalk.py文件')
-    project = models.OneToOneField('projects.Projects',
+    project = models.OneToOneField('projects.ProjectsModel',
                                    on_delete=models.CASCADE,
                                    related_name='debugtalks',
                                    help_text='所属项目')

@@ -3,10 +3,10 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class Configures(BaseModel):
+class ConfiguresModel(BaseModel):
 
     name = models.CharField('配置名称', max_length=50, help_text='配置名称')
-    interface = models.ForeignKey('interfaces.Interfaces',
+    interface = models.ForeignKey('interfaces.InterfacesModel',
                                   on_delete=models.CASCADE,
                                   related_name='configures',
                                   help_text='所属接口')

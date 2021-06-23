@@ -3,7 +3,7 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class Reports(BaseModel):
+class ReportsModel(BaseModel):
     name = models.CharField('报告名称',
                             max_length=200,
                             unique=True,

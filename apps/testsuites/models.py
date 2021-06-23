@@ -3,12 +3,12 @@ from django.db import models
 from utils.models import BaseModel
 
 
-class Testsuits(BaseModel):
+class TestsuitsModel(BaseModel):
     name = models.CharField('套件名称',
                             max_length=200,
                             unique=True,
                             help_text='套件名称')
-    project = models.ForeignKey('projects.Projects',
+    project = models.ForeignKey('projects.ProjectsModel',
                                 on_delete=models.CASCADE,
                                 related_name='testsuits',
                                 help_text='所属项目')
