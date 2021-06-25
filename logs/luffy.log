@@ -2189,3 +2189,475 @@ WARNING 2021-06-21 22:29:11,838 basehttp 161 "POST /user/register/ HTTP/1.1" 400
 WARNING 2021-06-21 22:29:11,913 log 224 Bad Request: /user/register/
 WARNING 2021-06-21 22:29:11,914 basehttp 161 "POST /user/register/ HTTP/1.1" 400 35
 INFO 2021-06-23 22:26:58,391 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:06:53,993 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:07:07,639 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:07:07,641 basehttp 75 - Broken pipe from ('127.0.0.1', 5122)
+
+INFO 2021-06-25 22:07:14,851 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:07:14,853 basehttp 75 - Broken pipe from ('127.0.0.1', 5311)
+
+INFO 2021-06-25 22:07:40,174 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:07:40,178 basehttp 75 - Broken pipe from ('127.0.0.1', 13316)
+
+INFO 2021-06-25 22:07:53,250 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:07:53,252 basehttp 75 - Broken pipe from ('127.0.0.1', 8978)
+
+INFO 2021-06-25 22:07:54,752 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:07:54,755 basehttp 75 - Broken pipe from ('127.0.0.1', 1309)
+
+INFO 2021-06-25 22:07:55,535 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:07:55,537 basehttp 75 - Broken pipe from ('127.0.0.1', 1237)
+
+INFO 2021-06-25 22:08:02,133 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:08:02,135 basehttp 75 - Broken pipe from ('127.0.0.1', 10225)
+
+INFO 2021-06-25 22:08:18,076 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:08:18,078 basehttp 75 - Broken pipe from ('127.0.0.1', 3458)
+
+INFO 2021-06-25 22:08:31,379 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:08:31,381 basehttp 75 - Broken pipe from ('127.0.0.1', 4994)
+
+INFO 2021-06-25 22:08:42,619 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:08:42,621 basehttp 75 - Broken pipe from ('127.0.0.1', 14735)
+
+INFO 2021-06-25 22:11:04,018 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-25 22:11:11,351 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:12:43,790 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-25 22:12:45,992 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:12:48,938 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-25 22:12:51,298 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:12:55,392 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-25 22:12:57,594 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:13:02,345 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:13:03,418 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:13:04,054 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:13:12,003 basehttp 161 "GET /user/sunwang/count/ HTTP/1.1" 200 32
+INFO 2021-06-25 22:13:12,015 basehttp 161 "GET /user/641210592@qq.com/count/ HTTP/1.1" 200 38
+INFO 2021-06-25 22:13:12,025 basehttp 161 "OPTIONS /user/register/ HTTP/1.1" 200 0
+INFO 2021-06-25 22:13:12,272 basehttp 161 "POST /user/register/ HTTP/1.1" 200 218
+INFO 2021-06-25 22:13:12,378 basehttp 161 "OPTIONS /summary/ HTTP/1.1" 200 0
+INFO 2021-06-25 22:13:12,378 basehttp 161 "OPTIONS /summary/ HTTP/1.1" 200 0
+WARNING 2021-06-25 22:13:12,435 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:13:12,437 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:13:12,454 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:13:12,456 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+INFO 2021-06-25 22:13:26,281 basehttp 161 "OPTIONS /projects/?page=1&size=10 HTTP/1.1" 200 0
+INFO 2021-06-25 22:13:26,281 basehttp 161 "OPTIONS /envs/names/ HTTP/1.1" 200 0
+WARNING 2021-06-25 22:13:26,304 log 224 Not Found: /envs/names/
+WARNING 2021-06-25 22:13:26,305 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-25 22:13:26,337 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 52
+INFO 2021-06-25 22:13:27,960 basehttp 161 "OPTIONS /projects/names/ HTTP/1.1" 200 0
+WARNING 2021-06-25 22:13:27,966 log 224 Not Found: /projects/names/
+WARNING 2021-06-25 22:13:27,968 basehttp 161 "GET /projects/names/ HTTP/1.1" 404 25
+WARNING 2021-06-25 22:13:54,828 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:13:54,829 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:14:05,676 log 224 Not Found: /envs/names/
+WARNING 2021-06-25 22:14:05,678 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-25 22:14:05,711 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 52
+WARNING 2021-06-25 22:14:20,653 log 224 Not Found: /projects/names/
+WARNING 2021-06-25 22:14:20,655 basehttp 161 "GET /projects/names/ HTTP/1.1" 404 25
+WARNING 2021-06-25 22:15:59,632 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:15:59,634 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:16:10,764 log 224 Not Found: /projects/names/
+WARNING 2021-06-25 22:16:10,765 basehttp 161 "GET /projects/names/ HTTP/1.1" 404 25
+WARNING 2021-06-25 22:16:34,424 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:16:34,426 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:17:04,055 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:17:04,057 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:18:15,452 log 224 Not Found: /summary/
+WARNING 2021-06-25 22:18:15,454 basehttp 161 "GET /summary/ HTTP/1.1" 404 2422
+WARNING 2021-06-25 22:18:24,020 log 224 Not Found: /envs/names/
+WARNING 2021-06-25 22:18:24,021 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-25 22:18:24,043 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 52
+WARNING 2021-06-25 22:19:15,846 log 224 Not Found: /envs/names/
+WARNING 2021-06-25 22:19:15,848 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-25 22:19:15,875 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 52
+INFO 2021-06-25 22:25:44,751 basehttp 161 "GET /projects/ HTTP/1.1" 200 52
+INFO 2021-06-25 22:27:30,883 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-25 22:27:33,222 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:27:36,127 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-25 22:27:38,368 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:28:07,935 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-25 22:28:10,242 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:28:49,400 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 22:28:53,634 basehttp 161 "GET /projects/?Page=1&Page%20size=10 HTTP/1.1" 200 52
+INFO 2021-06-25 23:26:00,971 basehttp 161 "GET /projects/?Page=1&Page%20size=5 HTTP/1.1" 200 52
+INFO 2021-06-25 23:33:42,918 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\models.py changed, reloading.
+INFO 2021-06-25 23:33:45,209 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:36:11,978 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:36:17,273 basehttp 161 "POST /projects/ HTTP/1.1" 201 245
+INFO 2021-06-25 23:37:15,014 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:37:23,262 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:37:32,663 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:37:38,974 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:37:45,326 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:37:59,741 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:38:05,840 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:38:12,821 basehttp 161 "POST /projects/ HTTP/1.1" 201 249
+INFO 2021-06-25 23:38:19,213 basehttp 161 "POST /projects/ HTTP/1.1" 201 250
+INFO 2021-06-25 23:38:28,733 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:38:34,087 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:38:39,481 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:38:46,892 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:38:53,273 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:38:59,516 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-25 23:41:13,101 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\models.py changed, reloading.
+INFO 2021-06-25 23:41:15,560 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:41:35,596 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\models.py changed, reloading.
+INFO 2021-06-25 23:41:37,935 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:41:51,597 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\serializers.py changed, reloading.
+INFO 2021-06-25 23:41:53,951 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:41:56,680 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\serializers.py changed, reloading.
+INFO 2021-06-25 23:41:58,980 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:42:10,225 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\serializers.py changed, reloading.
+INFO 2021-06-25 23:42:12,577 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:42:44,894 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-25 23:42:47,211 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:55:44,927 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:56:55,337 basehttp 161 "GET /projects/names?Page=&Page%20size=&ordering= HTTP/1.1" 301 0
+WARNING 2021-06-25 23:57:02,516 log 224 Not Found: /projects/names/
+WARNING 2021-06-25 23:57:02,518 basehttp 161 "GET /projects/names/?Page=&Page%20size=&ordering= HTTP/1.1" 404 28
+INFO 2021-06-25 23:58:18,266 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+ERROR 2021-06-25 23:58:49,194 log 224 Internal Server Error: /projects/names/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 31, in names
+    for project in all_prjects_list:
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\template\response.py", line 118, in __iter__
+    raise ContentNotRenderedError(
+django.template.response.ContentNotRenderedError: The response content must be rendered before it can be iterated over.
+ERROR 2021-06-25 23:58:49,205 basehttp 161 "GET /projects/names/ HTTP/1.1" 500 104168
+INFO 2021-06-25 23:59:17,988 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-25 23:59:20,374 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:59:23,207 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-25 23:59:25,536 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-25 23:59:29,558 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+ERROR 2021-06-25 23:59:33,803 log 224 Internal Server Error: /projects/names/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 31, in names
+    for project in all_prjects_list.content:
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\template\response.py", line 126, in content
+    raise ContentNotRenderedError(
+django.template.response.ContentNotRenderedError: The response content must be rendered before it can be accessed.
+ERROR 2021-06-25 23:59:33,817 basehttp 161 "GET /projects/names/ HTTP/1.1" 500 104230
+INFO 2021-06-26 00:00:38,317 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:01:06,241 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:01:15,904 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:01:26,325 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:02:28,693 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:02:31,667 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:03:07,085 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:03:17,003 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:05:04,105 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:08:29,069 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:08:31,645 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+ERROR 2021-06-26 00:08:35,157 log 224 Internal Server Error: /projects/names/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 31, in names
+    for project in all_prjects_list.data.results:
+AttributeError: 'collections.OrderedDict' object has no attribute 'results'
+ERROR 2021-06-26 00:08:35,169 basehttp 161 "GET /projects/names/ HTTP/1.1" 500 100401
+INFO 2021-06-26 00:08:53,702 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:09:18,705 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:26:20,511 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:26:26,685 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:27:08,826 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:27:10,983 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:27:37,699 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:27:42,350 basehttp 161 "GET /projects/names HTTP/1.1" 301 0
+INFO 2021-06-26 00:28:23,706 basehttp 161 "GET /projects/names/ HTTP/1.1" 200 116
+INFO 2021-06-26 00:28:54,898 basehttp 161 "OPTIONS /projects/?page=1&size=10 HTTP/1.1" 200 0
+INFO 2021-06-26 00:28:54,912 basehttp 161 "OPTIONS /envs/names/ HTTP/1.1" 200 0
+WARNING 2021-06-26 00:28:54,962 log 224 Not Found: /envs/names/
+WARNING 2021-06-26 00:28:54,964 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-26 00:28:54,985 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 849
+INFO 2021-06-26 00:30:50,528 basehttp 161 "GET /projects/names?Page%20size=5 HTTP/1.1" 301 0
+INFO 2021-06-26 00:30:50,589 basehttp 161 "GET /projects/names/?Page%20size=5 HTTP/1.1" 200 194
+INFO 2021-06-26 00:31:01,513 basehttp 161 "OPTIONS /projects/?page=1&size=4 HTTP/1.1" 200 0
+INFO 2021-06-26 00:31:01,573 basehttp 161 "GET /projects/?page=1&size=4 HTTP/1.1" 200 848
+INFO 2021-06-26 00:31:03,990 basehttp 161 "OPTIONS /projects/?page=2&size=4 HTTP/1.1" 200 0
+INFO 2021-06-26 00:31:04,048 basehttp 161 "GET /projects/?page=2&size=4 HTTP/1.1" 200 848
+INFO 2021-06-26 00:31:05,193 basehttp 161 "GET /projects/?page=1&size=4 HTTP/1.1" 200 848
+INFO 2021-06-26 00:31:05,975 basehttp 161 "GET /projects/?page=2&size=4 HTTP/1.1" 200 848
+INFO 2021-06-26 00:31:06,701 basehttp 161 "OPTIONS /projects/?page=3&size=4 HTTP/1.1" 200 0
+INFO 2021-06-26 00:31:06,760 basehttp 161 "GET /projects/?page=3&size=4 HTTP/1.1" 200 848
+INFO 2021-06-26 00:32:13,901 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-26 00:32:16,232 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:32:19,031 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-26 00:32:31,235 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-26 00:32:39,942 log 224 Not Found: /envs/names/
+WARNING 2021-06-26 00:32:39,944 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-26 00:32:39,981 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 2593
+INFO 2021-06-26 00:32:44,537 basehttp 161 "OPTIONS /projects/?page=1&size=5 HTTP/1.1" 200 0
+INFO 2021-06-26 00:32:44,597 basehttp 161 "GET /projects/?page=1&size=5 HTTP/1.1" 200 1341
+INFO 2021-06-26 00:32:48,044 basehttp 161 "GET /projects/?page=1&size=4 HTTP/1.1" 200 1091
+INFO 2021-06-26 00:32:49,470 basehttp 161 "GET /projects/?page=2&size=4 HTTP/1.1" 200 1131
+INFO 2021-06-26 00:32:50,983 basehttp 161 "GET /projects/?page=3&size=4 HTTP/1.1" 200 1145
+INFO 2021-06-26 00:32:55,316 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\utils\pagination.py changed, reloading.
+INFO 2021-06-26 00:32:57,631 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:33:16,975 basehttp 161 "OPTIONS /projects/names/ HTTP/1.1" 200 0
+INFO 2021-06-26 00:33:17,055 basehttp 161 "GET /projects/names/ HTTP/1.1" 200 116
+INFO 2021-06-26 00:34:01,359 basehttp 161 "OPTIONS /projects/ HTTP/1.1" 200 0
+INFO 2021-06-26 00:34:01,419 basehttp 161 "POST /projects/ HTTP/1.1" 201 258
+INFO 2021-06-26 00:34:02,716 basehttp 161 "GET /projects/names/ HTTP/1.1" 200 116
+WARNING 2021-06-26 00:34:08,549 log 224 Not Found: /envs/names/
+WARNING 2021-06-26 00:34:08,551 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-26 00:34:08,587 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 2593
+INFO 2021-06-26 00:34:10,446 basehttp 161 "OPTIONS /projects/?page=2&size=10 HTTP/1.1" 200 0
+INFO 2021-06-26 00:34:10,505 basehttp 161 "GET /projects/?page=2&size=10 HTTP/1.1" 200 1866
+INFO 2021-06-26 00:34:21,494 basehttp 161 "OPTIONS /projects/17/ HTTP/1.1" 200 0
+INFO 2021-06-26 00:34:21,592 basehttp 161 "DELETE /projects/17/ HTTP/1.1" 204 0
+INFO 2021-06-26 00:34:57,428 basehttp 161 "POST /projects/ HTTP/1.1" 201 252
+INFO 2021-06-26 00:34:58,702 basehttp 161 "GET /projects/names/ HTTP/1.1" 200 116
+WARNING 2021-06-26 00:35:02,387 log 224 Not Found: /envs/names/
+WARNING 2021-06-26 00:35:02,389 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-26 00:35:02,430 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 2593
+INFO 2021-06-26 00:35:03,925 basehttp 161 "GET /projects/?page=2&size=10 HTTP/1.1" 200 1860
+INFO 2021-06-26 00:37:37,018 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-26 00:37:39,661 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:37:42,553 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-26 00:37:45,042 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:37:48,092 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-26 00:37:50,604 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:38:01,834 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-26 00:38:15,041 log 224 Not Found: /envs/names/
+WARNING 2021-06-26 00:38:15,043 basehttp 161 "GET /envs/names/ HTTP/1.1" 404 2431
+INFO 2021-06-26 00:38:15,083 basehttp 161 "GET /projects/?page=1&size=10 HTTP/1.1" 200 2453
+INFO 2021-06-26 00:42:10,977 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:42:13,383 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:42:16,244 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:42:18,547 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:43:53,091 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:45:55,710 basehttp 161 "GET /projects/names?id=1 HTTP/1.1" 301 0
+INFO 2021-06-26 00:45:55,791 basehttp 161 "GET /projects/names/?id=1 HTTP/1.1" 200 116
+INFO 2021-06-26 00:47:10,908 basehttp 161 "GET /projects/1/ HTTP/1.1" 200 231
+INFO 2021-06-26 00:49:41,547 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:49:43,864 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:50:46,484 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 00:50:48,883 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:54:24,340 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 00:55:26,697 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 00:57:49,439 autoreload 250 F:\Python\Python_Venv\Django_AutoTest\Lib\site-packages\rest_framework\decorators.py changed, reloading.
+INFO 2021-06-26 01:13:10,547 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:13:44,194 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:21:28,811 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:21:50,947 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\main\settings.py changed, reloading.
+INFO 2021-06-26 01:21:53,397 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:29:15,916 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:29:20,412 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:29:28,764 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 43, in interfaces
+    projects_queryset = self.get_object()
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\generics.py", line 88, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+AssertionError: Expected view ProjectsViewSet to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2021-06-26 01:29:28,787 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 105042
+INFO 2021-06-26 01:30:15,176 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:31:19,039 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 43, in interfaces
+    projects_queryset = self.get_object()
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\generics.py", line 88, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+AssertionError: Expected view ProjectsViewSet to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2021-06-26 01:31:19,048 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 105042
+INFO 2021-06-26 01:32:19,699 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:32:25,690 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 43, in interfaces
+    projects_queryset = self.get_object()
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\generics.py", line 88, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+AssertionError: Expected view ProjectsViewSet to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2021-06-26 01:32:25,701 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 105042
+INFO 2021-06-26 01:33:42,910 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:33:45,316 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:34:06,259 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:34:10,882 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:34:13,629 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 43, in interfaces
+    projects_queryset = ProjectsModel.objects.get(id=pk)
+NameError: name 'pk' is not defined
+ERROR 2021-06-26 01:34:13,641 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 99393
+INFO 2021-06-26 01:35:10,343 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:35:12,967 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:35:23,917 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-26 01:35:29,224 log 224 Not Found: /projects/1/interfaces
+WARNING 2021-06-26 01:35:29,226 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 404 3353
+INFO 2021-06-26 01:35:42,975 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:35:45,392 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:35:49,597 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:35:52,648 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 43, in interfaces
+    projects_queryset = ProjectsModel.objects.get(id=pk)
+NameError: name 'pk' is not defined
+ERROR 2021-06-26 01:35:52,660 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 99555
+INFO 2021-06-26 01:36:04,113 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:36:06,545 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:36:09,373 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:36:16,214 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:36:18,844 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 01:36:32,622 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 200 2
+INFO 2021-06-26 01:36:40,768 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-06-26 01:36:43,324 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:36:48,743 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+ERROR 2021-06-26 01:36:49,081 log 224 Internal Server Error: /projects/1/interfaces/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py", line 47, in interfaces
+    return Response(interfaces_queryset.data)
+AttributeError: 'QuerySet' object has no attribute 'data'
+ERROR 2021-06-26 01:36:49,088 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 500 99108
+INFO 2021-06-26 01:37:00,148 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 01:40:19,113 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-26 01:40:21,838 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 01:40:21,915 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 200 2
+INFO 2021-06-26 01:40:28,716 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 01:40:28,773 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 200 2
+INFO 2021-06-26 01:40:34,561 basehttp 161 "GET /projects/1/interfaces HTTP/1.1" 301 0
+INFO 2021-06-26 01:40:34,616 basehttp 161 "GET /projects/1/interfaces/ HTTP/1.1" 200 2

@@ -11,5 +11,3 @@ class ProjectsModelSerializer(serializers.ModelSerializer):
         fields = "__all__"  # 将所有模型类视图中的字段进行转换
         # 序列化字段的深度
         depth = 1  # 解析字段的嵌套深度
-        # 对现有的字段加入额外的校验项
-        extra_kwargs = {"name": {"min_length": 5}}

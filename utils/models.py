@@ -18,7 +18,11 @@ class BaseModel(models.Model):
                                        help_text="更新时间",
                                        auto_now=True)
     # 对应模型内的数据注释
-    desc = models.TextField(verbose_name="注释", help_text="注释", default="")
+    desc = models.TextField(verbose_name="注释",
+                            help_text="注释",
+                            default="",
+                            blank=True,
+                            null=True)
     # 对应模型内的数据名称
     name = models.CharField(verbose_name="名称",
                             help_text="名称",

@@ -51,11 +51,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# 指定ip
+# 指定允许跨域访问的ip
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
     # ‘<YOUR_DOMAIN>[:PORT]‘,
-    'http://192.168.0.113:8080'
+    'http://192.168.0.114:8080'
 ]
 
 ROOT_URLCONF = 'main.urls'
@@ -184,6 +184,9 @@ REST_FRAMEWORK = {
     # 'DEFAULT_PERMISSION_CLASSES': [
     #     'rest_framework.permissions.IsAdminUser',  # 所有权限
     # ],
+    # 时间格式
+    'DATETIME_FORMAT':
+    "%Y-%m-%d %H:%M:%S",
 }
 
 # 日志配置
