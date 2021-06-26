@@ -182,7 +182,7 @@ REST_FRAMEWORK = {
     ],
     # # 指定全局权限[一般作为局部添加权限机制]
     # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAdminUser',  # 所有权限
+    #     'rest_framework.permissions.AllowAny',  # 所有权限
     # ],
     # 时间格式
     'DATETIME_FORMAT':

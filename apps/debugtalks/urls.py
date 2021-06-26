@@ -14,19 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
-from rest_framework.documentation import include_docs_urls
+from rest_framework import routers
 
+from .views import DebugTalksViewSet
+
+# 生成路由器
+router = routers.SimpleRouter()
+# 注册路由器
+router.register("", DebugTalksViewSet)
+# 加入路由条目
 urlpatterns = [
-    # 项目
-    path('projects/', include('projects.urls')),
-    # 接口
-    path('interfaces/', include('interfaces.urls')),
-    # 该路径是rest自带的一个登陆接口界面 多用户开发中调试
-    # path("login/", include("rest_framework.urls")),
-    # 用户
-    path('user/', include('users.urls')),
-    # debugtalks
-    path('debugtalks/', include('debugtalks.urls')),
-    path("docs",
-         include_docs_urls(title="测试平台接口文档", description="xxx项目的接口测试说明文档"))
+    path("", include(router.urls)),
 ]

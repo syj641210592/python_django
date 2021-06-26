@@ -1,5 +1,4 @@
 from rest_framework.validators import UniqueValidator  # 唯一值校验
-from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from .models import InterfacesModel
@@ -22,10 +21,10 @@ class InterfacesModelSerializer(serializers.ModelSerializer):
     # 外键字段[必须加 因为原本定义的外键字段interface 因为要返回父表信息被占用后 未进行反序列化校验]
     project_id = serializers.IntegerField(
         validators={validate_foreignKey_exist})
-    # 父表所有信息
-    project = ProjectsModelSerializer(label='获取父表project所有信息',
-                                      help_text='获取父表project所有信息',
-                                      read_only=True)
+
+    # 获从表取主表的其他信息  必须用从表的外键字段名
+    project = serializers.SlugRelatedField(
+        slug_field="name", queryset=ProjectsModel.objects.all())
 
     class Meta:
 
@@ -50,10 +49,17 @@ class InterfacesModelSerializer(serializers.ModelSerializer):
         # 对现有的字段加入额外的校验项
         extra_kwargs = {
             "name": {
-                "min_length": 5,
+                "min_length": 3,
                 "validators": {
                     UniqueValidator(queryset=InterfacesModel.objects.all(),
                                     message="接口名称已存在"), validate_name_contains
                 }
             }
         }
+
+
+# 接口自定义字段模型序列化器类
+class InterfacesDryModelSerializer(InterfacesModelSerializer):
+    class Meta(InterfacesModelSerializer.Meta):
+        # 指定序列化模型类中的字段
+        fields = ("id", "name")
