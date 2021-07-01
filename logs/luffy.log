@@ -5141,3 +5141,901 @@ WARNING 2021-07-01 20:56:01,067 log 224 Not Found: /reports/
 WARNING 2021-07-01 20:56:01,069 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 404 2767
 WARNING 2021-07-01 20:56:01,083 log 224 Not Found: /reports/
 WARNING 2021-07-01 20:56:01,084 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 404 2767
+INFO 2021-07-01 21:00:29,016 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:00:52,029 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:01:11,453 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 21:01:21,404 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 21:02:25,690 log 224 Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 663, in to_representation
+    return [
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 500, in to_representation
+    for field in fields:
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 361, in _readable_fields
+    for field in self.fields.values():
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 349, in fields
+    for key, value in self.get_fields().items():
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 1029, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 1152, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'include' was included on serializer ReportsModelSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2021-07-01 21:02:25,702 basehttp 161 "GET /reports/ HTTP/1.1" 500 147551
+INFO 2021-07-01 21:02:45,959 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:02:48,267 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:02:52,437 basehttp 161 "GET /reports/ HTTP/1.1" 200 146104
+INFO 2021-07-01 21:06:09,129 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\testsuites\serializers.py changed, reloading.
+INFO 2021-07-01 21:06:11,423 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:06:40,317 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:06:49,886 basehttp 161 "GET /reports/ HTTP/1.1" 200 30926
+INFO 2021-07-01 21:07:09,130 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:07:11,508 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:09:03,617 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:09:36,354 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3208
+INFO 2021-07-01 21:15:16,776 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:15:22,697 basehttp 161 "GET /reports/ HTTP/1.1" 200 30818
+INFO 2021-07-01 21:15:29,802 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3208
+INFO 2021-07-01 21:16:08,107 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 200 15979
+INFO 2021-07-01 21:16:18,864 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:16:21,307 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:16:22,544 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:16:22,690 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:16:33,914 basehttp 161 "OPTIONS /reports/1/ HTTP/1.1" 200 0
+INFO 2021-07-01 21:16:33,973 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3208
+INFO 2021-07-01 21:17:02,428 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:17:05,307 basehttp 161 "OPTIONS /reports/1/download/ HTTP/1.1" 200 0
+INFO 2021-07-01 21:17:05,365 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 200 15979
+INFO 2021-07-01 21:19:24,856 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 21:19:27,383 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:19:33,923 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 21:19:36,433 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:19:39,294 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 21:27:50,419 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 21:27:56,165 log 224 Internal Server Error: /reports/1/download/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py", line 30, in download
+    response = StreamingHttpResponse(res["html"])
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'html'
+ERROR 2021-07-01 21:27:56,174 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 500 107165
+INFO 2021-07-01 21:28:38,272 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 21:28:49,756 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:29:00,051 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 200 15312
+INFO 2021-07-01 21:29:11,667 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:29:11,820 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:29:17,394 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 200 15312
+INFO 2021-07-01 21:29:26,410 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3208
+INFO 2021-07-01 21:30:32,106 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3208
+INFO 2021-07-01 21:30:51,635 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139122
+INFO 2021-07-01 21:31:36,770 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:31:39,195 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 21:32:05,474 log 224 Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 663, in to_representation
+    return [
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 15, in to_representation
+    data['result'] = '成功' if data.get('result') else '失败'
+AttributeError: 'ReportsModel' object has no attribute 'get'
+ERROR 2021-07-01 21:32:05,485 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 500 142162
+ERROR 2021-07-01 21:32:05,817 log 224 Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 663, in to_representation
+    return [
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 15, in to_representation
+    data['result'] = '成功' if data.get('result') else '失败'
+AttributeError: 'ReportsModel' object has no attribute 'get'
+ERROR 2021-07-01 21:32:05,824 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 500 142162
+INFO 2021-07-01 21:32:15,923 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:32:18,214 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:32:21,945 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:32:22,095 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:32:24,692 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:32:52,077 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:32:54,423 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:35:17,402 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:35:22,388 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:37:23,157 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:37:45,017 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:44:10,700 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:44:13,854 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:44:17,022 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:45:06,759 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:45:10,514 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:45:21,749 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3212
+INFO 2021-07-01 21:45:35,603 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:45:56,902 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:46:02,805 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+WARNING 2021-07-01 21:46:13,736 log 224 Not Found: /summary/
+WARNING 2021-07-01 21:46:13,737 basehttp 161 "GET /summary/ HTTP/1.1" 404 2856
+WARNING 2021-07-01 21:46:13,755 log 224 Not Found: /summary/
+WARNING 2021-07-01 21:46:13,756 basehttp 161 "GET /summary/ HTTP/1.1" 404 2856
+INFO 2021-07-01 21:46:19,518 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:46:19,674 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:46:21,734 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 21:46:28,333 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:46:36,631 basehttp 161 "OPTIONS /reports/2/ HTTP/1.1" 200 0
+INFO 2021-07-01 21:46:36,700 basehttp 161 "GET /reports/2/ HTTP/1.1" 200 16441
+INFO 2021-07-01 21:46:38,923 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 21:46:40,876 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139158
+INFO 2021-07-01 21:47:34,442 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:47:37,010 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:47:39,868 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 21:47:42,244 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 21:48:05,695 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+INFO 2021-07-01 21:48:05,848 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+INFO 2021-07-01 21:48:08,615 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 21:48:14,978 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+INFO 2021-07-01 21:48:20,710 basehttp 161 "OPTIONS /reports/?page=2&size=10 HTTP/1.1" 200 0
+INFO 2021-07-01 21:48:20,783 basehttp 161 "GET /reports/?page=2&size=10 HTTP/1.1" 200 15322
+INFO 2021-07-01 21:48:22,233 basehttp 161 "OPTIONS /reports/13/ HTTP/1.1" 200 0
+INFO 2021-07-01 21:48:22,294 basehttp 161 "GET /reports/13/ HTTP/1.1" 200 5203
+INFO 2021-07-01 21:48:24,330 basehttp 161 "GET /reports/?page=2&size=10 HTTP/1.1" 200 15322
+INFO 2021-07-01 21:49:42,849 basehttp 161 "OPTIONS /reports/11/ HTTP/1.1" 200 0
+INFO 2021-07-01 21:49:42,910 basehttp 161 "GET /reports/11/ HTTP/1.1" 200 3452
+INFO 2021-07-01 22:01:44,274 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:01:48,254 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = pickle.dump(res["html"])
+TypeError: dump() missing required argument 'file' (pos 2)
+ERROR 2021-07-01 22:01:48,263 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122406
+INFO 2021-07-01 22:02:46,179 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:02:48,526 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:02:52,468 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = pickle.loads(res["html"])
+TypeError: a bytes-like object is required, not 'str'
+ERROR 2021-07-01 22:02:52,477 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122378
+INFO 2021-07-01 22:03:06,734 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:03:09,149 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:03:11,753 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 22:03:19,872 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:03:22,286 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:03:28,917 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:03:31,175 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:03:47,486 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:03:49,811 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:03:56,699 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = json.loads(res["html"])
+  File "F:\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "F:\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "F:\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR 2021-07-01 22:03:56,712 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 152511
+INFO 2021-07-01 22:04:52,286 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:04:54,654 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:05:01,143 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:05:03,577 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:05:06,975 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = eval(res["html"])
+  File "<string>", line 1
+    <head>
+    ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:05:06,984 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122417
+ERROR 2021-07-01 22:05:47,146 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = eval(res["html"])
+  File "<string>", line 1
+    <head>
+    ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:05:47,153 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122417
+INFO 2021-07-01 22:05:53,277 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:05:55,849 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:05:59,460 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["html"] = pickle.loads(res["html"])
+TypeError: a bytes-like object is required, not 'str'
+ERROR 2021-07-01 22:05:59,469 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122378
+INFO 2021-07-01 22:06:49,073 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:06:51,532 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:06:56,786 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:06:59,267 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:07:14,435 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:07:16,944 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:07:21,280 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = pickle.loads(res["summary"])
+TypeError: a bytes-like object is required, not 'str'
+ERROR 2021-07-01 22:07:21,290 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 122390
+INFO 2021-07-01 22:07:40,169 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:07:42,499 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:07:51,699 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:07:55,654 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = json.loads(res["summary"])
+  File "F:\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "F:\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "F:\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 1091 (char 1090)
+ERROR 2021-07-01 22:07:55,665 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 148594
+INFO 2021-07-01 22:08:13,387 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:08:15,706 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:08:22,551 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = eval(res["summary"])
+  File "<string>", line 1
+    {"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": 1573023864.1816425, "duration": 1.268, "start_datetime": "2019-11-06 15:04:24"}, "platform": {"httprunner_version": "1.5.8", "python_version": "CPython 3.7.2", "platform": "Windows-10-10.0.17763-SP0"}, "details": [{"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": "2019-11-06 15:04:24", "duration": 1.2684216499328613}, "records": [{"name": "登录接口_正向用例_自动化测试平台", "status": "success", "attachment": "", "meta_data": {"request": {"url": "http://localhost:8000/user/login/", "method": "POST", "headers": {"user-agent": "Mozilla/5.0 KeYou", "Accept-Encoding": "gzip, deflate", "accept": "application/json", "Connection": "keep-alive", "Content-Length": "44", "Content-Type": "application/json"}, "start_timestamp": "2019-11-06 15:04:24", "json": {"password": "123456", "username": "keyou1"}, "body": "{"password": "123456", "username": "keyou1"}"}, "response": {"status_code": 200, "headers": {"Date": "Wed, 06 Nov 2019 07:04:25 GMT", "Server": "WSGIServer/0.2 CPython/3.7.2", "Content-Type": "application/json", "Vary": "Accept, Origin", "Allow": "POST, OPTIONS", "X-Frame-Options": "SAMEORIGIN", "Content-Length": "252"}, "content_size": 252, "response_time_ms": 1263.54, "elapsed_ms": 236.812, "encoding": null, "content": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "content_type": "application/json", "ok": true, "url": "http://localhost:8000/user/login/", "reason": "OK", "cookies": {}, "text": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "json": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}}, "validators": [{"check": "status_code", "expect": 200, "comparator": "equals", "check_value": 200, "check_result": "pass"}]}}], "name": "登录接口_正向用例_自动化测试平台", "base_url": "http://localhost:8000", "output": []}], "html_report_name": "登录接口_正向用例_自动化测试平台"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:08:22,567 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 134933
+ERROR 2021-07-01 22:08:36,437 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = eval(res["summary"])
+  File "<string>", line 1
+    {"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": 1573023864.1816425, "duration": 1.268, "start_datetime": "2019-11-06 15:04:24"}, "platform": {"httprunner_version": "1.5.8", "python_version": "CPython 3.7.2", "platform": "Windows-10-10.0.17763-SP0"}, "details": [{"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": "2019-11-06 15:04:24", "duration": 1.2684216499328613}, "records": [{"name": "登录接口_正向用例_自动化测试平台", "status": "success", "attachment": "", "meta_data": {"request": {"url": "http://localhost:8000/user/login/", "method": "POST", "headers": {"user-agent": "Mozilla/5.0 KeYou", "Accept-Encoding": "gzip, deflate", "accept": "application/json", "Connection": "keep-alive", "Content-Length": "44", "Content-Type": "application/json"}, "start_timestamp": "2019-11-06 15:04:24", "json": {"password": "123456", "username": "keyou1"}, "body": "{"password": "123456", "username": "keyou1"}"}, "response": {"status_code": 200, "headers": {"Date": "Wed, 06 Nov 2019 07:04:25 GMT", "Server": "WSGIServer/0.2 CPython/3.7.2", "Content-Type": "application/json", "Vary": "Accept, Origin", "Allow": "POST, OPTIONS", "X-Frame-Options": "SAMEORIGIN", "Content-Length": "252"}, "content_size": 252, "response_time_ms": 1263.54, "elapsed_ms": 236.812, "encoding": null, "content": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "content_type": "application/json", "ok": true, "url": "http://localhost:8000/user/login/", "reason": "OK", "cookies": {}, "text": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "json": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}}, "validators": [{"check": "status_code", "expect": 200, "comparator": "equals", "check_value": 200, "check_result": "pass"}]}}], "name": "登录接口_正向用例_自动化测试平台", "base_url": "http://localhost:8000", "output": []}], "html_report_name": "登录接口_正向用例_自动化测试平台"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:08:36,451 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 134933
+INFO 2021-07-01 22:10:01,962 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:10:04,372 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:10:25,216 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:10:29,654 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = str(eval(res["summary"]))
+  File "<string>", line 1
+    {"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": 1573023864.1816425, "duration": 1.268, "start_datetime": "2019-11-06 15:04:24"}, "platform": {"httprunner_version": "1.5.8", "python_version": "CPython 3.7.2", "platform": "Windows-10-10.0.17763-SP0"}, "details": [{"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": "2019-11-06 15:04:24", "duration": 1.2684216499328613}, "records": [{"name": "登录接口_正向用例_自动化测试平台", "status": "success", "attachment": "", "meta_data": {"request": {"url": "http://localhost:8000/user/login/", "method": "POST", "headers": {"user-agent": "Mozilla/5.0 KeYou", "Accept-Encoding": "gzip, deflate", "accept": "application/json", "Connection": "keep-alive", "Content-Length": "44", "Content-Type": "application/json"}, "start_timestamp": "2019-11-06 15:04:24", "json": {"password": "123456", "username": "keyou1"}, "body": "{"password": "123456", "username": "keyou1"}"}, "response": {"status_code": 200, "headers": {"Date": "Wed, 06 Nov 2019 07:04:25 GMT", "Server": "WSGIServer/0.2 CPython/3.7.2", "Content-Type": "application/json", "Vary": "Accept, Origin", "Allow": "POST, OPTIONS", "X-Frame-Options": "SAMEORIGIN", "Content-Length": "252"}, "content_size": 252, "response_time_ms": 1263.54, "elapsed_ms": 236.812, "encoding": null, "content": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "content_type": "application/json", "ok": true, "url": "http://localhost:8000/user/login/", "reason": "OK", "cookies": {}, "text": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "json": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}}, "validators": [{"check": "status_code", "expect": 200, "comparator": "equals", "check_value": 200, "check_result": "pass"}]}}], "name": "登录接口_正向用例_自动化测试平台", "base_url": "http://localhost:8000", "output": []}], "html_report_name": "登录接口_正向用例_自动化测试平台"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:10:29,669 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 134943
+INFO 2021-07-01 22:10:58,393 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:11:00,762 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:11:27,170 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:11:31,003 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    res["summary"] = '%s' % eval(res["summary"])
+  File "<string>", line 1
+    {"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": 1573023864.1816425, "duration": 1.268, "start_datetime": "2019-11-06 15:04:24"}, "platform": {"httprunner_version": "1.5.8", "python_version": "CPython 3.7.2", "platform": "Windows-10-10.0.17763-SP0"}, "details": [{"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": "2019-11-06 15:04:24", "duration": 1.2684216499328613}, "records": [{"name": "登录接口_正向用例_自动化测试平台", "status": "success", "attachment": "", "meta_data": {"request": {"url": "http://localhost:8000/user/login/", "method": "POST", "headers": {"user-agent": "Mozilla/5.0 KeYou", "Accept-Encoding": "gzip, deflate", "accept": "application/json", "Connection": "keep-alive", "Content-Length": "44", "Content-Type": "application/json"}, "start_timestamp": "2019-11-06 15:04:24", "json": {"password": "123456", "username": "keyou1"}, "body": "{"password": "123456", "username": "keyou1"}"}, "response": {"status_code": 200, "headers": {"Date": "Wed, 06 Nov 2019 07:04:25 GMT", "Server": "WSGIServer/0.2 CPython/3.7.2", "Content-Type": "application/json", "Vary": "Accept, Origin", "Allow": "POST, OPTIONS", "X-Frame-Options": "SAMEORIGIN", "Content-Length": "252"}, "content_size": 252, "response_time_ms": 1263.54, "elapsed_ms": 236.812, "encoding": null, "content": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "content_type": "application/json", "ok": true, "url": "http://localhost:8000/user/login/", "reason": "OK", "cookies": {}, "text": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "json": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}}, "validators": [{"check": "status_code", "expect": 200, "comparator": "equals", "check_value": 200, "check_result": "pass"}]}}], "name": "登录接口_正向用例_自动化测试平台", "base_url": "http://localhost:8000", "output": []}], "html_report_name": "登录接口_正向用例_自动化测试平台"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:11:31,019 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 134967
+INFO 2021-07-01 22:11:52,544 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:11:55,022 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:12:16,896 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:12:19,008 log 224 Internal Server Error: /reports/1/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    value = eval(res["summary"])
+  File "<string>", line 1
+    {"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": 1573023864.1816425, "duration": 1.268, "start_datetime": "2019-11-06 15:04:24"}, "platform": {"httprunner_version": "1.5.8", "python_version": "CPython 3.7.2", "platform": "Windows-10-10.0.17763-SP0"}, "details": [{"success": true, "stat": {"testsRun": 1, "failures": 0, "errors": 0, "skipped": 0, "expectedFailures": 0, "unexpectedSuccesses": 0, "successes": 1}, "time": {"start_at": "2019-11-06 15:04:24", "duration": 1.2684216499328613}, "records": [{"name": "登录接口_正向用例_自动化测试平台", "status": "success", "attachment": "", "meta_data": {"request": {"url": "http://localhost:8000/user/login/", "method": "POST", "headers": {"user-agent": "Mozilla/5.0 KeYou", "Accept-Encoding": "gzip, deflate", "accept": "application/json", "Connection": "keep-alive", "Content-Length": "44", "Content-Type": "application/json"}, "start_timestamp": "2019-11-06 15:04:24", "json": {"password": "123456", "username": "keyou1"}, "body": "{"password": "123456", "username": "keyou1"}"}, "response": {"status_code": 200, "headers": {"Date": "Wed, 06 Nov 2019 07:04:25 GMT", "Server": "WSGIServer/0.2 CPython/3.7.2", "Content-Type": "application/json", "Vary": "Accept, Origin", "Allow": "POST, OPTIONS", "X-Frame-Options": "SAMEORIGIN", "Content-Length": "252"}, "content_size": 252, "response_time_ms": 1263.54, "elapsed_ms": 236.812, "encoding": null, "content": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "content_type": "application/json", "ok": true, "url": "http://localhost:8000/user/login/", "reason": "OK", "cookies": {}, "text": "{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}", "json": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImtleW91MSIsImV4cCI6MTU3MzExMDI2NSwiZW1haWwiOiJrZXlvdTEwMEBxcS5jb20ifQ.jlJd8iLh7l926zNGAGH5jj9vhgtawJRDpY_U-HZOCR4", "user_id": 1, "username": "keyou1", "status_code": 200}}, "validators": [{"check": "status_code", "expect": 200, "comparator": "equals", "check_value": 200, "check_result": "pass"}]}}], "name": "登录接口_正向用例_自动化测试平台", "base_url": "http://localhost:8000", "output": []}], "html_report_name": "登录接口_正向用例_自动化测试平台"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+ERROR 2021-07-01 22:12:19,022 basehttp 161 "GET /reports/1/ HTTP/1.1" 500 134940
+INFO 2021-07-01 22:14:56,033 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:14:59,245 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 22:15:50,555 basehttp 161 "GET /reports/?page=2&size=10 HTTP/1.1" 200 15322
+INFO 2021-07-01 22:15:53,174 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+INFO 2021-07-01 22:15:53,329 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+INFO 2021-07-01 22:15:56,031 basehttp 161 "GET /reports/1/ HTTP/1.1" 200 3057
+INFO 2021-07-01 22:16:04,517 basehttp 161 "GET /reports/?page=1&size=10 HTTP/1.1" 200 139138
+WARNING 2021-07-01 22:17:59,194 log 224 Not Found: /
+WARNING 2021-07-01 22:17:59,195 basehttp 161 "GET / HTTP/1.1" 404 2814
+WARNING 2021-07-01 22:17:59,308 log 224 Not Found: /favicon.ico
+WARNING 2021-07-01 22:17:59,310 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2865
+ERROR 2021-07-01 22:18:03,866 log 224 Internal Server Error: /docs
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\views.py", line 37, in get
+    schema = self.schema_generator.get_schema(request, self.public)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 156, in get_schema
+    links = self.get_links(None if public else request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 143, in get_links
+    link = view.schema.get_link(path, method, base_url=self.url)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 367, in get_link
+    fields += self.get_serializer_fields(path, method)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 450, in get_serializer_fields
+    serializer = view.get_serializer()
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\generics.py", line 109, in get_serializer
+    kwargs.setdefault('context', self.get_serializer_context())
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py", line 69, in get_serializer_context
+    return {"url": self.url}
+AttributeError: 'InterfacesViewSet' object has no attribute 'url'
+ERROR 2021-07-01 22:18:03,876 basehttp 161 "GET /docs HTTP/1.1" 500 136843
+INFO 2021-07-01 22:19:56,028 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:19:58,657 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-07-01 22:20:16,571 log 224 Not Found: /docs/
+WARNING 2021-07-01 22:20:16,573 basehttp 161 "GET /docs/ HTTP/1.1" 404 3091
+ERROR 2021-07-01 22:20:25,499 log 224 Internal Server Error: /docs
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\views.py", line 37, in get
+    schema = self.schema_generator.get_schema(request, self.public)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 156, in get_schema
+    links = self.get_links(None if public else request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 143, in get_links
+    link = view.schema.get_link(path, method, base_url=self.url)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 367, in get_link
+    fields += self.get_serializer_fields(path, method)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\schemas\coreapi.py", line 450, in get_serializer_fields
+    serializer = view.get_serializer()
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\generics.py", line 109, in get_serializer
+    kwargs.setdefault('context', self.get_serializer_context())
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py", line 69, in get_serializer_context
+    return {"url": self.url}
+AttributeError: 'InterfacesViewSet' object has no attribute 'url'
+ERROR 2021-07-01 22:20:25,510 basehttp 161 "GET /docs HTTP/1.1" 500 136843
+INFO 2021-07-01 22:20:50,794 basehttp 161 "GET /interfaces/names HTTP/1.1" 301 0
+WARNING 2021-07-01 22:20:50,801 log 224 Not Found: /interfaces/names/
+WARNING 2021-07-01 22:20:50,803 basehttp 161 "GET /interfaces/names/ HTTP/1.1" 404 25
+INFO 2021-07-01 22:21:06,425 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+INFO 2021-07-01 22:21:16,169 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 200 192
+INFO 2021-07-01 22:23:12,194 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:23:14,701 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:23:47,981 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:23:50,284 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:25:01,431 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:25:06,480 basehttp 161 "GET /docs HTTP/1.1" 200 212060
+INFO 2021-07-01 22:25:07,884 basehttp 161 "GET /static/rest_framework/docs/css/jquery.json-view.min.css HTTP/1.1" 200 1307
+INFO 2021-07-01 22:25:07,923 basehttp 161 "GET /static/rest_framework/docs/css/base.css HTTP/1.1" 200 6147
+INFO 2021-07-01 22:25:07,925 basehttp 161 "GET /static/rest_framework/css/bootstrap-theme.min.css HTTP/1.1" 200 23411
+INFO 2021-07-01 22:25:07,927 basehttp 161 "GET /static/rest_framework/css/font-awesome-4.0.3.css HTTP/1.1" 200 21658
+INFO 2021-07-01 22:25:07,933 basehttp 161 "GET /docsschema.js HTTP/1.1" 200 27144
+INFO 2021-07-01 22:25:07,936 basehttp 161 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2021-07-01 22:25:07,937 basehttp 161 "GET /static/rest_framework/js/coreapi-0.1.1.js HTTP/1.1" 200 157600
+INFO 2021-07-01 22:25:08,011 basehttp 161 "GET /static/rest_framework/docs/js/jquery.json-view.min.js HTTP/1.1" 200 2700
+INFO 2021-07-01 22:25:08,014 basehttp 161 "GET /static/rest_framework/docs/js/api.js HTTP/1.1" 200 10539
+INFO 2021-07-01 22:25:08,014 basehttp 161 "GET /static/rest_framework/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+INFO 2021-07-01 22:25:08,018 basehttp 161 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2021-07-01 22:25:08,029 basehttp 161 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2021-07-01 22:25:08,180 basehttp 161 "GET /static/rest_framework/docs/img/favicon.ico HTTP/1.1" 200 5430
+INFO 2021-07-01 22:25:24,275 basehttp 161 "GET /reports/ HTTP/1.1" 200 30823
+INFO 2021-07-01 22:44:41,152 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:44:49,602 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+ERROR 2021-07-01 22:44:49,961 log 224 Internal Server Error: /interfaces/1/testcases/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py", line 48, in testcases_or_configures
+    if "testcases" in self.url:
+AttributeError: 'InterfacesViewSet' object has no attribute 'url'
+ERROR 2021-07-01 22:44:49,968 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 500 100465
+INFO 2021-07-01 22:45:41,925 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:45:44,430 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:45:48,933 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+INFO 2021-07-01 22:45:49,021 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 200 192
+INFO 2021-07-01 22:46:00,660 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+INFO 2021-07-01 22:46:37,816 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 200 192
+INFO 2021-07-01 22:46:46,399 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+INFO 2021-07-01 22:46:52,442 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 200 192
+INFO 2021-07-01 22:48:08,129 basehttp 161 "GET /interfaces/1/testcases HTTP/1.1" 301 0
+INFO 2021-07-01 22:49:23,809 basehttp 161 "GET /interfaces/1/testcases/ HTTP/1.1" 200 192
+INFO 2021-07-01 22:52:10,002 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:52:12,657 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:52:19,282 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py changed, reloading.
+INFO 2021-07-01 22:52:21,600 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:52:47,742 log 224 Internal Server Error: /reports/1/download/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py", line 35, in download
+    res = super().retrieve(ruquest, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    if self.context.view["action"] == "download":
+AttributeError: 'dict' object has no attribute 'view'
+ERROR 2021-07-01 22:52:47,756 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 500 128299
+INFO 2021-07-01 22:53:55,114 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-07-01 22:54:01,632 log 224 Internal Server Error: /reports/1/download/
+Traceback (most recent call last):
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py", line 35, in download
+    res = super().retrieve(ruquest, *args, **kwargs)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "F:\Python\Python_Venv\Django_AutoTest\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\serializers.py", line 18, in to_representation
+    if self.context["view"]["action"] == "download":
+TypeError: 'ReportsViewSet' object is not subscriptable
+ERROR 2021-07-01 22:54:01,646 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 500 128267
+INFO 2021-07-01 22:54:46,323 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:55:07,036 basehttp 161 "GET /reports/1/download/ HTTP/1.1" 200 15312
+INFO 2021-07-01 22:55:50,724 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:55:53,090 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:55:56,064 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:55:58,617 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:01,657 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:04,045 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:06,877 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:09,409 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:12,372 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:14,761 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:17,664 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:19,907 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:22,776 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:25,043 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:56:32,829 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\reports\views.py changed, reloading.
+INFO 2021-07-01 22:56:35,394 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:58:35,189 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\projects\views.py changed, reloading.
+INFO 2021-07-01 22:58:37,555 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:59:07,613 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\debugtalks\views.py changed, reloading.
+INFO 2021-07-01 22:59:10,145 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:59:32,843 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:59:35,258 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:59:41,927 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:59:44,172 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-07-01 22:59:51,934 autoreload 250 F:\Python\Python_Project\python_test_developer\python_test_developer_django\apps\interfaces\views.py changed, reloading.
+INFO 2021-07-01 22:59:54,449 autoreload 636 Watching for file changes with StatReloader

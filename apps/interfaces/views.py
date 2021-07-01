@@ -41,11 +41,9 @@ class InterfacesViewSet(viewsets.ModelViewSet):
 
     @action(methods=["GET"], detail=True, url_path="(testcases|configures)")
     def testcases_or_configures(self, ruquest, *args, **kwargs):
-        # 获取id对应的interfaces数据
-        self.url = ruquest.path
         # 获取interfaces模型查询结果
         response = super().retrieve(ruquest, *args, **kwargs)
-        if "testcases" in self.url:
+        if "testcases" in ruquest.path:
             response.data = response.data["testcasesmodel_set"]
         else:
             response.data = response.data["configures"]
@@ -61,12 +59,6 @@ class InterfacesViewSet(viewsets.ModelViewSet):
         else:
             # return self.serializer_class
             return super().get_serializer_class()
-
-    def get_serializer_context(self):
-        """
-        自定义向序列化器类传参
-        """
-        return {"url": self.url}
 
     def paginate_queryset(self, queryset):
         """

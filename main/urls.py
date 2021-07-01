@@ -31,6 +31,8 @@ urlpatterns = [
     path('envs/', include('envs.urls')),
     # testsuites
     path('testsuits/', include('testsuites.urls')),
+    # testsuites
+    path('reports/', include('reports.urls')),
     path("docs",
          include_docs_urls(title="测试平台接口文档", description="xxx项目的接口测试说明文档"))
 ]

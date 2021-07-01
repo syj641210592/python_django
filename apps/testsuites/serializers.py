@@ -19,7 +19,7 @@ class TestsuitsModelSerializer(serializers.ModelSerializer):
         # 指定模型类
         model = TestsuitsModel
         # 指定序列化模型类中的字段
-        exclude = ("desc", "include")  # 将所有模型类视图中的字段进行转换
+        exclude = ("desc", "include")  # 排除特定模型类视图中的字段进行转换
 
 
 # 项目模型序列化器类

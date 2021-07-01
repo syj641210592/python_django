@@ -18,6 +18,8 @@ class DebugTalksViewSet(viewsets.ReadOnlyModelViewSet):
     search_fields = ['=name', '=id']
     # 指定排序字段
     ordering_fields = ['id', 'name']
+    # 序列化器参数
+    context = {}
     # 鉴权方式
     permission_classes = [permissions.AllowAny]
 
@@ -27,6 +29,8 @@ class DebugTalksViewSet(viewsets.ReadOnlyModelViewSet):
         return response
 
     def get_serializer_context(self):
-        data = super().get_serializer_context()
-        data["action"] = self.action
-        return data
+        """自定义序列化器传参"""
+        self.context = super().get_serializer_context()
+        # 该参数在原context["view"].action已经存在, 可以不写
+        self.context["action"] = self.action
+        return self.context

@@ -24,6 +24,8 @@ class ProjectsViewSet(viewsets.ModelViewSet):
     search_fields = ['=name', '=leader', '=id']
     # 指定排序字段
     ordering_fields = ['id', 'name']
+    # 序列化器参数
+    context = {}
     # 鉴权方式
     permission_classes = [permissions.AllowAny]
 
@@ -76,7 +78,11 @@ class ProjectsViewSet(viewsets.ModelViewSet):
             return super().get_serializer_class()
 
     def get_serializer_context(self):
-        return {"action": self.action}
+        """自定义序列化器传参"""
+        self.context = super().get_serializer_context()
+        # 该参数在原context["view"].action已经存在, 可以不写
+        self.context["action"] = self.action
+        return self.context
 
     def paginate_queryset(self, queryset):
         """
