@@ -12,6 +12,14 @@ class DebugTalksModelSerializer(serializers.ModelSerializer):
         # 指定模型类
         model = DebugTalksModel
         # 指定序列化模型类中的字段
-        fields = ("id", "project", "name")  # 将所有模型类视图中的字段进行转换
-        # 序列化字段的深度
-        depth = 1  # 解析字段的嵌套深度
+        fields = ("id", "project", "name", "debugtalk")
+        # 批量修改read_only=True字段
+        read_only_fields = ["id", "project", "name", "debugtalk"]
+
+    def to_representation(self, data):
+        res = super().to_representation(data)
+        if self.context["action"] == "retrieve":
+            res = {"debugtalk": res["debugtalk"]}
+        else:
+            res.pop("debugtalk")
+        return res

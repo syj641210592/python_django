@@ -27,6 +27,10 @@ urlpatterns = [
     path('user/', include('users.urls')),
     # debugtalks
     path('debugtalks/', include('debugtalks.urls')),
+    # envs
+    path('envs/', include('envs.urls')),
+    # testsuites
+    path('testsuits/', include('testsuites.urls')),
     path("docs",
          include_docs_urls(title="测试平台接口文档", description="xxx项目的接口测试说明文档"))
 ]

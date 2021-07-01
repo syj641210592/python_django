@@ -1,12 +1,14 @@
 from rest_framework import filters, permissions, viewsets
 from rest_framework.decorators import action
-from rest_framework.response import Response
 
+from configures.models import ConfiguresModel
 from debugtalks.models import DebugTalksModel
+from interfaces.models import InterfacesModel
+from testcases.models import TestcasesModel
+from testsuites.models import TestsuitsModel
 from utils.pagination import PageNumberPagination
-
 from .models import ProjectsModel
-from .serializers import ProjectsDryModelSerializer, ProjectsModelSerializer
+from .serializers import ProjectsModelSerializer, ProjectsDiyModelSerializer
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):
@@ -38,24 +40,14 @@ class ProjectsViewSet(viewsets.ModelViewSet):
         respones_data = super().list(request, *args, **kwargs)
         # 重定义结果数据
         for item in respones_data.data['results']:
-            # 取出当前的数据id, 根据id获取对应的外键信息
-            self.kwargs["pk"] = item["id"]
-            projects_queryset = self.get_object()
-            interfaces_querysets = projects_queryset.project_link_Interface.all(
-            )
-            item['testsuits'] = projects_queryset.testsuits.all().count()
-            item['interfaces'] = interfaces_querysets.count()
-            # 遍历所有的接口字段信息, 根据id获取外键数据
-            testcases_count = 0
-            configures_count = 0
-            for interfaces_queryset in interfaces_querysets:
-                testcases_count += interfaces_queryset.testcasesmodel_set.all(
-                ).count() or 0
-                configures_count += interfaces_queryset.configures.all().count(
-                ) or 0
-            item['testcases'] = testcases_count
-            item['configures'] = configures_count
-
+            item['testsuits'] = TestsuitsModel.objects.filter(
+                project=item["id"]).count()
+            item['interfaces'] = InterfacesModel.objects.filter(
+                project=item["id"]).count()
+            item['testcases'] = TestcasesModel.objects.filter(
+                interface__project=item["id"]).count()
+            item['configures'] = ConfiguresModel.objects.filter(
+                interface__project=item["id"]).count()
         # 返回结果数据
         return respones_data
 
@@ -67,34 +59,30 @@ class ProjectsViewSet(viewsets.ModelViewSet):
 
     @action(methods=["GET"], detail=True)
     def interfaces(self, ruquest, *args, **kwargs):
-        # 获取projects表id数据
-        projects_queryset = self.get_object()
-        # 获取id对应的interfaces数据
-        interfaces_queryset = projects_queryset.project_link_Interface.all()
-        # 修改返回数据
-        # 定义新的结果数据
-        respones_list = [{
-            "id": project["id"],
-            "name": project["name"]
-        } for project in interfaces_queryset]
-        return Response(respones_list)
+        # 获取interfaces模型查询结果
+        response = super().retrieve(ruquest, *args, **kwargs)
+        # 读取结果内的序列化数据
+        response.data = response.data.get("project_link_Interface")
+        return response
 
     def get_serializer_class(self):
         """
         重定义模型序列化器类指定
         """
-        dry_field = ["names", "interfaces"]
-        if self.action in dry_field:
-            return ProjectsDryModelSerializer
+        action_list = ["names", "interfaces"]
+        if self.action in action_list:
+            return ProjectsDiyModelSerializer
         else:
-            # return self.serializer_class
             return super().get_serializer_class()
+
+    def get_serializer_context(self):
+        return {"action": self.action}
 
     def paginate_queryset(self, queryset):
         """
         重定义分页引擎
         """
-        dry_field = ["interfaces"]
+        dry_field = ["names", "interfaces"]
         if self.action in dry_field:
             return None
         else:

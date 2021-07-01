@@ -3,10 +3,11 @@ from rest_framework import filters
 from rest_framework import permissions
 
 from .models import InterfacesModel
-from .serializers import InterfacesModelSerializer, InterfacesDryModelSerializer
+from testcases.models import TestcasesModel
+from configures.models import ConfiguresModel
+from .serializers import InterfacesModelSerializer, InterfacesDiryModelSerializer
 from utils.pagination import PageNumberPagination
 from rest_framework.decorators import action
-from rest_framework.response import Response
 
 
 class InterfacesViewSet(viewsets.ModelViewSet):
@@ -19,7 +20,7 @@ class InterfacesViewSet(viewsets.ModelViewSet):
     # 指定分页引擎
     pagination_class = PageNumberPagination
     # 指定搜索字段规则
-    search_fields = ['=name', '=tester', '=id']
+    search_fields = ['=name', '=id']
     # 指定排序字段
     ordering_fields = ['id', 'name']
     # 鉴权方式
@@ -30,57 +31,48 @@ class InterfacesViewSet(viewsets.ModelViewSet):
         respones_data = super().list(request, *args, **kwargs)
         # 重定义结果数据
         for item in respones_data.data['results']:
-            # 取出当前的数据id, 根据id获取对应的外键信息
-            self.kwargs["pk"] = item["id"]
-            interfaces_queryset = self.get_object()
             # 遍历所有的接口字段信息, 根据id获取外键数据
-            item['testcases'] = interfaces_queryset.testcasesmodel_set.all(
-            ).count() or 0
-            item['configures'] = interfaces_queryset.configures.all().count(
-            ) or 0
+            item['testcases'] = TestcasesModel.objects.filter(
+                interface_id=item["id"]).count()
+            item['configures'] = ConfiguresModel.objects.filter(
+                interface_id=item["id"]).count()
         # 返回结果数据
         return respones_data
 
-    @action(methods=["GET"], detail=False)
-    def names(self, ruquest, *args, **kwargs):
-        # # 定义新的结果数据
-        response = super().list(ruquest, *args, **kwargs)
-        return response
-
     @action(methods=["GET"], detail=True, url_path="(testcases|configures)")
     def testcases_or_configures(self, ruquest, *args, **kwargs):
-        # 获取interfaces表id数据
-        interfaces_queryset = self.get_object()
         # 获取id对应的interfaces数据
-        url = ruquest.path
-        if "testcases" in url:
-            querysets = interfaces_queryset.testcasesmodel_set.all()
+        self.url = ruquest.path
+        # 获取interfaces模型查询结果
+        response = super().retrieve(ruquest, *args, **kwargs)
+        if "testcases" in self.url:
+            response.data = response.data["testcasesmodel_set"]
         else:
-            querysets = interfaces_queryset.configures.all()
-        # 修改返回数据
-        # 定义新的结果数据
-        respones_list = [{
-            "id": queryset["id"],
-            "name": queryset["name"]
-        } for queryset in querysets]
-        return Response(respones_list)
+            response.data = response.data["configures"]
+        return response
 
     def get_serializer_class(self):
         """
         重定义模型序列化器类指定
         """
-        dry_field = ["names"]
+        dry_field = ["testcases_or_configures"]
         if self.action in dry_field:
-            return InterfacesDryModelSerializer
+            return InterfacesDiryModelSerializer
         else:
             # return self.serializer_class
             return super().get_serializer_class()
+
+    def get_serializer_context(self):
+        """
+        自定义向序列化器类传参
+        """
+        return {"url": self.url}
 
     def paginate_queryset(self, queryset):
         """
         重定义分页引擎
         """
-        dry_field = ["names", "testcases_or_configures"]
+        dry_field = ["testcases_or_configures"]
         if self.action in dry_field:
             return None
         else:
