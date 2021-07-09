@@ -1,13 +1,14 @@
-from rest_framework import filters, permissions, viewsets
+from rest_framework import filters, permissions, viewsets, mixins
 from rest_framework.decorators import action
-from django.http.response import StreamingHttpResponse
+from django.http.response import FileResponse
 
 from utils.pagination import PageNumberPagination
 from .models import ReportsModel
 from .serializers import ReportsModelSerializer
 
 
-class ReportsViewSet(viewsets.ReadOnlyModelViewSet):
+class ReportsViewSet(mixins.RetrieveModelMixin, mixins.DestroyModelMixin,
+                     mixins.ListModelMixin, viewsets.GenericViewSet):
     # 指定模型类
     queryset = ReportsModel.objects.all()
     # 指定序列化模型类
@@ -25,15 +26,11 @@ class ReportsViewSet(viewsets.ReadOnlyModelViewSet):
     # 鉴权方式
     permission_classes = [permissions.AllowAny]
 
-    def retrieve(self, request, *args, **kwargs):
-        res = super().retrieve(request, *args, **kwargs)
-        return res
-
     @action(methods=["GET"], detail=True)
     def download(self, ruquest, *args, **kwargs):
         # # 定义新的结果数据
         res = super().retrieve(ruquest, *args, **kwargs)
-        response = StreamingHttpResponse(res.data["html"])
+        response = FileResponse(res.data["html"])
         response['Content-Type'] = 'application/octet-stream'
         response[
             'Content-Disposition'] = f"attachment; filename*=UTF-8 '' {res.data['name'] + '.html'}"

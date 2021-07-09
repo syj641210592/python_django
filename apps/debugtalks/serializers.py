@@ -18,8 +18,17 @@ class DebugTalksModelSerializer(serializers.ModelSerializer):
 
     def to_representation(self, data):
         res = super().to_representation(data)
-        if self.context["action"] == "retrieve":
+        if self.context["view"].action == "retrieve":
             res = {"debugtalk": res["debugtalk"]}
         else:
             res.pop("debugtalk")
         return res
+
+
+# 项目模型更新序列化器类
+class DebugTalksUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        # 指定模型类
+        model = DebugTalksModel
+        # 指定序列化模型类中的字段
+        fields = ("id", "debugtalk")

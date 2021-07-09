@@ -1,11 +1,12 @@
-from rest_framework import filters, permissions, viewsets
+from rest_framework import filters, permissions, mixins, viewsets
 
 from utils.pagination import PageNumberPagination
 from .models import DebugTalksModel
-from .serializers import DebugTalksModelSerializer
+from .serializers import DebugTalksModelSerializer, DebugTalksUpdateSerializer
 
 
-class DebugTalksViewSet(viewsets.ReadOnlyModelViewSet):
+class DebugTalksViewSet(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                        mixins.ListModelMixin, viewsets.GenericViewSet):
     # 指定模型类
     queryset = DebugTalksModel.objects.all()
     # 指定序列化模型类
@@ -23,14 +24,12 @@ class DebugTalksViewSet(viewsets.ReadOnlyModelViewSet):
     # 鉴权方式
     permission_classes = [permissions.AllowAny]
 
-    def retrieve(self, request, *args, **kwargs):
-        # 指定序列化模型类
-        response = super().retrieve(request, *args, **kwargs)
+    def update(self, request, *args, **kwargs):
+        response = super().update(request, *args, **kwargs)
         return response
 
-    def get_serializer_context(self):
-        """自定义序列化器传参"""
-        self.context = super().get_serializer_context()
-        # 该参数在原context["view"].action已经存在, 可以不写
-        self.context["action"] = self.action
-        return self.context
+    def get_serializer_class(self):
+        if "update" in self.action:
+            return DebugTalksUpdateSerializer
+        else:
+            return super().get_serializer_class()

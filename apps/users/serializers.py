@@ -51,8 +51,16 @@ class UserRegisterModelSeralizer(serializers.ModelSerializer):
         }
 
 
-# class UserCountSeralizer(serializers.Serializer):
-#     """用户查询接口序列化器类"""
-#     id = serializers.IntegerField()
-#     username = serializers.CharField()
-#     email = serializers.CharField()
+class UserInforModelSeralizer(serializers.ModelSerializer):
+    class Meta:
+        # 指定模型类
+        model = User
+        # 指定序列化模型类中的字段
+        fields = ("username", "is_superuser", "date_joined", "last_login")
+        read_only_fields = ("username", "is_superuser", "date_joined",
+                            "last_login")
+
+    def to_representation(self, data):
+        res = super().to_representation(data)
+        res["role"] = "管理员" if res.pop("is_superuser") else "普通用户"
+        return res

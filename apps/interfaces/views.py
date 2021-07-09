@@ -1,13 +1,15 @@
 from rest_framework import viewsets
 from rest_framework import filters
 from rest_framework import permissions
+from rest_framework.decorators import action
 
 from .models import InterfacesModel
+from .serializers import InterfacesModelSerializer, InterfacesDiryModelSerializer
+from envs.serializers import EnvsIdModelSerializer
 from testcases.models import TestcasesModel
 from configures.models import ConfiguresModel
-from .serializers import InterfacesModelSerializer, InterfacesDiryModelSerializer
+from utils import comment
 from utils.pagination import PageNumberPagination
-from rest_framework.decorators import action
 
 
 class InterfacesViewSet(viewsets.ModelViewSet):
@@ -49,13 +51,26 @@ class InterfacesViewSet(viewsets.ModelViewSet):
             response.data = response.data["configures"]
         return response
 
+    @action(methods=['POST'], detail=True)
+    def run(self, request, *args, **kwargs):
+        # 创建接口级别测试启动实例
+        path_dict = comment.http_run_env_get(self)
+        # 取出当前接口下的所有测试用例
+        querysets = TestcasesModel.objects.filter(
+            interface_id=path_dict["instance"].id)
+        path_dict["instance"] = querysets.first()
+        path_dict["querysets"] = querysets
+        response = comment.http_run(path_dict)
+        return response
+
     def get_serializer_class(self):
         """
         重定义模型序列化器类指定
         """
-        dry_field = ["testcases_or_configures"]
-        if self.action in dry_field:
+        if self.action == "testcases_or_configures":
             return InterfacesDiryModelSerializer
+        if self.action == "run":
+            return EnvsIdModelSerializer
         else:
             # return self.serializer_class
             return super().get_serializer_class()

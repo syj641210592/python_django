@@ -33,6 +33,14 @@ urlpatterns = [
     path('testsuits/', include('testsuites.urls')),
     # testsuites
     path('reports/', include('reports.urls')),
+    # testcases
+    path('testcases/', include('testcases.urls')),
+    # configures
+    path('configures/', include('configures.urls')),
+    # summary
+    path('summary/', include('summary.urls')),
+    # 重定向
+    path('', include('summary.urls')),
     path("docs",
          include_docs_urls(title="测试平台接口文档", description="xxx项目的接口测试说明文档"))
 ]

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes', 'django.contrib.sessions',
     'django.contrib.messages', 'django.contrib.staticfiles', 'projects',
     'interfaces', 'configures', 'debugtalks', 'envs', 'reports', 'testcases',
-    'testsuites', 'users', 'rest_framework', 'corsheaders'
+    'testsuites', 'summary', 'users', 'rest_framework', 'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -144,7 +144,8 @@ DATABASES = {
         'POST': 3306,  # 端口
     }
 }
-
+# token失效时间，设置为1天，开发可自行配置
+AUTH_TOKEN_AGE = 60 * 60 * 24
 # 修改REST_FRAMEWORK全局默认配置
 REST_FRAMEWORK = {
     # 渲染器
@@ -176,9 +177,11 @@ REST_FRAMEWORK = {
     "rest_framework.schemas.coreapi.AutoSchema",
     # 在setting.py文件REST_FRAMEWORK中 修改全局认证类与授权类信息
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',  # 会话认证
+        # a.token认证
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        # b.Session会话认证
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication'
-        # 'rest_framework.authentication.BaseJSONWebTokenAuthentication',
     ],
     # # 指定全局权限[一般作为局部添加权限机制]
     # 'DEFAULT_PERMISSION_CLASSES': [
