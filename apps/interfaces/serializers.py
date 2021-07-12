@@ -99,7 +99,7 @@ class InterfacesDiryModelSerializer(serializers.ModelSerializer):
     def to_representation(self, data):
         res = super().to_representation(data)
         if "testcases" in self.context["request"].path:
-            res = {"testcasesmodel_set": res["testcasesmodel_set"]}
+            res = {"testcases_or_configures": res["testcasesmodel_set"]}
         else:
-            res = {"configures": res["configures"]}
+            res = {"testcases_or_configures": res["configures"]}
         return res

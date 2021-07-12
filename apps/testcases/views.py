@@ -120,7 +120,7 @@ class TestcasesViewSet(viewsets.ModelViewSet):
         # 创建用例级别测试启动实例
         path_dict = comment.http_run_env_get(self)
         path_dict["querysets"] = [path_dict["instance"]]
-        response = comment.http_run(path_dict)
+        response = comment.http_run(path_dict, path_dict["querysets"])
         return response
 
     def get_serializer_class(self):

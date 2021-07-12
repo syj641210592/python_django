@@ -9,7 +9,6 @@ from httprunner.task import HttpRunner
 # from httprunner.report import gen_html_report  # 2.5.7版本
 from rest_framework.response import Response
 
-from projects.models import ProjectsModel
 from configures.models import ConfiguresModel
 from debugtalks.models import DebugTalksModel
 from testcases.models import TestcasesModel
@@ -18,6 +17,7 @@ from reports.models import ReportsModel
 
 
 def http_run_env_get(obj):
+    """"获取环境配置数据"""
     path_dict = {}
     # 1、对请求参数env_id进行反序列化校验
     instance = obj.get_object()
@@ -30,6 +30,26 @@ def http_run_env_get(obj):
     base_url = env_instance.base_url if env_instance.base_url else ""
     path_dict.update({"instance": instance, "base_url": base_url})
     return path_dict
+
+
+def http_run(path_dict, attr):
+    """创建测试用例文件夹及文件并启动"""
+    for interface in attr:
+        if isinstance(interface, int):
+            querysets = TestcasesModel.objects.filter(interface_id=interface)
+        else:
+            querysets = TestcasesModel.objects.filter(
+                interface_id=interface.id)
+        if querysets.count():
+            path_dict["instance"] = querysets.first()
+            path_dict["querysets"] = querysets
+            path_dict = http_testcasedir_create(path_dict)
+            path_dict = http_testreportdir_create(path_dict)
+            for instance in path_dict["querysets"]:
+                path_dict["instance"] = instance
+                path_dict = http_testcasefile_create(path_dict)
+            res = http_runner(path_dict)
+    return res
 
 
 def http_testcasedir_create(path_dict):
@@ -70,7 +90,7 @@ def http_testcasedir_create(path_dict):
 
 
 def http_testreportdir_create(path_dict):
-    """创建http项目目录和用例文件"""
+    """创建report文件夹"""
     # 创建report文件夹
     report_path = os.path.join(path_dict["ht_pro_path"], "report")
     if not os.path.exists(report_path):
@@ -127,14 +147,8 @@ def http_testcasefile_create(path_dict):
     return path_dict
 
 
-def http_testinterfacesfile_create(path_dict):
-    """创建测试接口下的测试用例yaml文件"""
-    for instance in path_dict["querysets"]:
-        path_dict["instance"] = instance
-        path_dict = http_testcasefile_create(path_dict)
-
-
 def http_runner(path_dict):
+    """启动httprunner"""
     try:
         # failfast当用例执行失败之后,会自动暂停,默认为False,可以不写
         # save_tests可以以json格式在logs文件夹下生成测试用例转换成httprunner可识别的数据结构解析步骤
@@ -146,16 +160,6 @@ def http_runner(path_dict):
         return report_instance_create(httprun, path_dict["testcase_dir_name"])
     except Exception:
         return Response({'msg': '用例执行失败', 'status': 1}, status=400)
-
-
-def http_run(path_dict):
-    path_dict = http_testcasedir_create(path_dict)
-    path_dict = http_testreportdir_create(path_dict)
-    for instance in path_dict["querysets"]:
-        path_dict["instance"] = instance
-        path_dict = http_testcasefile_create(path_dict)
-    res = http_runner(path_dict)
-    return res
 
 
 def report_instance_create(httprun, report_name):

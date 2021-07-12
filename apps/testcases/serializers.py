@@ -4,8 +4,6 @@ from rest_framework import serializers
 
 from interfaces.models import InterfacesModel
 from projects.models import ProjectsModel
-from envs.models import EnvsModel
-
 from .models import TestcasesModel
 from utils.validate import Serializers_Validate
 
@@ -99,4 +97,3 @@ class TestcasesModelSerializer(serializers.ModelSerializer):
         if "include" in res:
             res["include"] = json.loads(res["include"])
         return res
-

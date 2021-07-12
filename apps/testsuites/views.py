@@ -42,12 +42,7 @@ class TestsuitsViewSet(viewsets.ReadOnlyModelViewSet):
         instance = path_dict["instance"]
         include = json.loads(instance.include)
         # 取出当前套件下的所有测试接口
-        for interface_id in include:
-            querysets = TestcasesModel.objects.filter(
-                interface_id=interface_id)
-            path_dict["instance"] = querysets.first()
-            path_dict["querysets"] = querysets
-            response = comment.http_run(path_dict)
+        response = comment.http_run(path_dict, include)
         return response
 
     def get_serializer_class(self):

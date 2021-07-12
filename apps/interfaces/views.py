@@ -41,14 +41,11 @@ class InterfacesViewSet(viewsets.ModelViewSet):
         # 返回结果数据
         return respones_data
 
-    @action(methods=["GET"], detail=True, url_path="(testcases|configures)")
-    def testcases_or_configures(self, ruquest, *args, **kwargs):
+    @action(methods=["GET"], detail=True, url_path="(testcases|configs)")
+    def testcases_or_configs(self, ruquest, *args, **kwargs):
         # 获取interfaces模型查询结果
         response = super().retrieve(ruquest, *args, **kwargs)
-        if "testcases" in ruquest.path:
-            response.data = response.data["testcasesmodel_set"]
-        else:
-            response.data = response.data["configures"]
+        response.data = response.data["testcases_or_configures"]
         return response
 
     @action(methods=['POST'], detail=True)
@@ -58,18 +55,16 @@ class InterfacesViewSet(viewsets.ModelViewSet):
         # 取出当前接口下的所有测试用例
         querysets = TestcasesModel.objects.filter(
             interface_id=path_dict["instance"].id)
-        path_dict["instance"] = querysets.first()
-        path_dict["querysets"] = querysets
-        response = comment.http_run(path_dict)
+        response = comment.http_run(path_dict, querysets)
         return response
 
     def get_serializer_class(self):
         """
         重定义模型序列化器类指定
         """
-        if self.action == "testcases_or_configures":
+        if self.action == "testcases_or_configs":
             return InterfacesDiryModelSerializer
-        if self.action == "run":
+        elif self.action == "run":
             return EnvsIdModelSerializer
         else:
             # return self.serializer_class

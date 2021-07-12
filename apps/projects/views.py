@@ -1,3 +1,5 @@
+import json
+
 from rest_framework import filters, permissions, viewsets
 from rest_framework.decorators import action
 
@@ -6,9 +8,11 @@ from debugtalks.models import DebugTalksModel
 from interfaces.models import InterfacesModel
 from testcases.models import TestcasesModel
 from testsuites.models import TestsuitsModel
+from envs.serializers import EnvsIdModelSerializer
 from utils.pagination import PageNumberPagination
 from .models import ProjectsModel
 from .serializers import ProjectsModelSerializer, ProjectsDiyModelSerializer
+from utils import comment
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):
@@ -67,6 +71,17 @@ class ProjectsViewSet(viewsets.ModelViewSet):
         response.data = response.data.get("project_link_Interface")
         return response
 
+    @action(methods=['POST'], detail=True)
+    def run(self, request, *args, **kwargs):
+        # 创建接口级别测试启动实例
+        path_dict = comment.http_run_env_get(self)
+        instance = path_dict["instance"]
+        interfaces_querysets = InterfacesModel.objects.filter(
+            project_id=instance.id)
+        # 取出当前套件下的所有测试接口
+        response = comment.http_run(path_dict, interfaces_querysets)
+        return response
+
     def get_serializer_class(self):
         """
         重定义模型序列化器类指定
@@ -74,6 +89,8 @@ class ProjectsViewSet(viewsets.ModelViewSet):
         action_list = ["names", "interfaces"]
         if self.action in action_list:
             return ProjectsDiyModelSerializer
+        elif self.action == "run":
+            return EnvsIdModelSerializer
         else:
             return super().get_serializer_class()
 
